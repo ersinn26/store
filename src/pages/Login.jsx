@@ -19,7 +19,10 @@ const Login = () => {
             Enter your credentials to access your account
           </p>
         </div>
-        <form className="flex flex-col text-left p-3 gap-5">
+        <form
+          // onSubmit={handleSubmit}
+          className="flex flex-col text-left p-3 gap-5 "
+        >
           <div className="flex flex-col gap-2">
             <label
               className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
@@ -33,8 +36,10 @@ const Login = () => {
               id="email"
               placeholder="Enter your email"
               required
-            ></input>
-            <div className="flex flex-col gap-2">
+              // onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col gap-2">
             <label
               className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
               htmlFor="password"
@@ -47,7 +52,8 @@ const Login = () => {
               id="password"
               placeholder="Enter your password"
               required
-            ></input>
+              // onChange={(e) => setPass(e.target.value)}
+            />
           </div>
           <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">
             Sign In
@@ -60,7 +66,6 @@ const Login = () => {
               Reset password
             </span>
           </p>
-          </div>
         </form>
       </div>
     </div>
