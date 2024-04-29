@@ -1,26 +1,37 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const { login } = useContext(AuthContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
+      console.log({ email, pass });
+      login({ email, pass });
+    } else {
+      alert("Kullanıcı bilgileri yanlış");
+    }
+  };
   return (
     <div className="loginDiv">
-      <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center">
-        <div className="flex justify-center items-center mt-2 gap-2">
-          <span className="w-[6px] h-[39px]  bg-yellow-500"></span>
-          <h1
-            className="text-[25px] sm:text-[32px] font-montserrat font-[700]
- uppercase"
-          >
+      <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center ">
+        <div className="flex justify-center items-center mt-2 gap-2 ">
+          <span className="w-[6px] h-[39px] bg-yellow-500 "></span>
+          <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase ">
             Clarus Store
           </h1>
         </div>
         <div className="my-2">
-          <h3 className="text-[22px] font-[600] font-montserrat">SIGN IN</h3>
-          <p className="text-labelColor font-label font-montserrat mt-1">
+          <h3 className="font-montserrat font-[600] text-[22px] ">SIGN IN</h3>
+          <p className="font-montserrat text-labelColor text-label mt-1">
             Enter your credentials to access your account
           </p>
         </div>
         <form
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           className="flex flex-col text-left p-3 gap-5 "
         >
           <div className="flex flex-col gap-2">
@@ -36,7 +47,7 @@ const Login = () => {
               id="email"
               placeholder="Enter your email"
               required
-              // onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -52,7 +63,7 @@ const Login = () => {
               id="password"
               placeholder="Enter your password"
               required
-              // onChange={(e) => setPass(e.target.value)}
+              onChange={(e) => setPass(e.target.value)}
             />
           </div>
           <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">
