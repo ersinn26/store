@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { closeNavbar, logoutIcon, openNavbar } from "../helpers/icons";
 import { AuthContext } from "../context/AuthProvider";
 
-import Teknosa from "../assets/Teknosa.png";
+import Tekno from "../assets/Tekno.png";
 
 const navigation = [
   {
@@ -35,7 +35,7 @@ const Navbar = () => {
             target="true"
             className="flex items-center"
           >
-            <img src={Teknosa} alt="clarusway" width={120} height={80} />
+            <img src={Tekno} alt="clarusway" width={120} height={80} />
             <span className="text-gray-700 hover:text-gray-900 font-medium">
               
             </span>
