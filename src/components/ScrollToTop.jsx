@@ -16,6 +16,7 @@ export default function ScrollToTop() {
       src={scrollTopIcon}
       width={40}
       alt="scrollup"
+      style={{"border-radius": "50%"}}
     />
   ) : null;
 }

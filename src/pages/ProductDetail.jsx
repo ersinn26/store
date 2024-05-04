@@ -60,7 +60,7 @@ const ProductDetail = () => {
                 <span className="block text-gray-900">
                   Category :{category}{" "}
                 </span>
-                <span className="block  text-sm">Price : {price} $</span>
+                <span className=" block  text-sm">Price : {price} $</span>
               </div>
             </div>
             <div className="flex justify-end gap-3 mt-4">

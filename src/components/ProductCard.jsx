@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
               {category}
             </p>
           </div>
-          <p className="text-sm font-medium text-gray-900">{price} $</p>
+          <p className="bg-navbarColor px-5 py-3 text-sm font-medium text-gray-900">{price} $</p>
         </div>
       </div>
       <ScrollToTop />
