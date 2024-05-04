@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { closeNavbar, logoutIcon, openNavbar } from "../helpers/icons";
 import { AuthContext } from "../context/AuthProvider";
+
+import Teknosa from "../assets/Teknosa.png";
 
 const navigation = [
   {
@@ -29,13 +31,13 @@ const Navbar = () => {
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block ">
           <a
-            href="https://clarusway.com/"
+            href="https://www.teknosa.com/"
             target="true"
             className="flex items-center"
           >
-            <img src={logo} alt="clarusway" width={50} height={50} />
+            <img src={Teknosa} alt="clarusway" width={120} height={80} />
             <span className="text-gray-700 hover:text-gray-900 font-medium">
-              Clarusway
+              
             </span>
           </a>
           {/**icon md ekranlardan sonra gizlensin diyoruz */}
