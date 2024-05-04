@@ -15,7 +15,7 @@ const About = () => {
           </p>
         </div>
         <div className="mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
             {team.map((item, idx) => (
               <li key={idx}>
                 <div className="w-24 h-24 mx-auto">
