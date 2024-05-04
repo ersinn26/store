@@ -33,7 +33,7 @@ const Navbar = () => {
             target="true"
             className="flex items-center"
           >
-            <img src={Tekno} alt="clarusway" width={150} height={80} />
+            <img src={Tekno} alt="clarusway" width={150} height={80} style={{"border-radius": "9px"}} />
             <span className="text-gray-700 hover:text-gray-900 font-medium">
               
             </span>
